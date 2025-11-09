@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Painel do Administrador - Cafeteria Encanto</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>☕ Painel do Administrador</h1>
+    <p>Gerencie sua cafeteria com elegância</p>
+  </header>
+
+  <main>
+    <nav class="menu-adm">
+      <button onclick="mostrar('maquinas')">Máquinas</button>
+      <button onclick="mostrar('funcionarios')">Funcionários</button>
+      <button onclick="mostrar('vendas')">Vendas</button>
+      <button onclick="mostrar('pagamento')">Pagamento</button>
+      <button onclick="mostrar('produtos')">Produtos</button>
+      <button onclick="mostrar('categorias')">Categorias</button>
+      <button onclick="mostrar('cep')">CEP</button>
+    </nav>
+
+    <section id="maquinas" class="painel oculto">
+      <h2>Cadastro de Máquinas</h2>
+      <form>
+        <input type="text" placeholder="Nome da máquina" required />
+        <input type="text" placeholder="Modelo" />
+        <input type="date" placeholder="Data de aquisição" />
+        <textarea placeholder="Descrição ou observações"></textarea>
+        <button type="submit">Cadastrar Máquina</button>
+      </form>
+    </section>
+
+    <section id="funcionarios" class="painel oculto">
+      <h2>Cadastro de Funcionários</h2>
+      <form>
+        <input type="text" placeholder="Nome completo" required />
+        <input type="email" placeholder="Email corporativo" required />
+        <input type="tel" placeholder="Telefone" />
+        <input type="text" placeholder="Cargo" />
+        <input type="date" placeholder="Data de admissão" />
+        <button type="submit">Cadastrar Funcionário</button>
+      </form>
+    </section>
+
+    <section id="vendas" class="painel oculto">
+      <h2>Vendas</h2>
+      <p>Resumo de vendas aparecerá aqui.</p>
+      <button>Exportar Relatório</button>
+    </section>
+
+    <section id="pagamento" class="painel oculto">
+      <h2>Tipo de Pagamento</h2>
+      <form>
+        <select>
+          <option>Dinheiro</option>
+          <option>Cartão de Crédito</option>
+          <option>Cartão de Débito</option>
+          <option>Pix</option>
+        </select>
+        <button type="submit">Salvar Preferência</button>
+      </form>
+    </section>
+
+    <section id="produtos" class="painel oculto">
+      <h2>Cadastro de Produtos</h2>
+      <form>
+        <input type="text" placeholder="Nome do produto" required />
+        <input type="number" placeholder="Preço (R$)" step="0.01" required />
+        <select>
+          <option value="">Selecione a categoria</option>
+          <option>Café</option>
+          <option>Bolos</option>
+          <option>Salgados</option>
+        </select>
+        <textarea placeholder="Descrição do produto"></textarea>
+        <button type="submit">Cadastrar Produto</button>
+      </form>
+    </section>
+
+    <section id="categorias" class="painel oculto">
+      <h2>Cadastro de Categorias</h2>
+      <form>
+        <input type="text" placeholder="Nome da categoria" required />
+        <textarea placeholder="Descrição da categoria"></textarea>
+        <button type="submit">Cadastrar Categoria</button>
+      </form>
+    </section>
+
+    <section id="cep" class="painel oculto">
+      <h2>Cadastro de CEP</h2>
+      <form>
+        <input type="text" placeholder="CEP" required />
+        <input type="text" placeholder="Rua" />
+        <input type="text" placeholder="Bairro" />
+        <input type="text" placeholder="Cidade" />
+        <input type="text" placeholder="Estado" />
+        <button type="submit">Cadastrar Endereço</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
